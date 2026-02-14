@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open Me ❤️</title>
+
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+#text{
+font-size:32px;
+width:80%;
+white-space:pre-line;
+}
+
+img{
+width:260px;
+border-radius:20px;
+margin-top:30px;
+opacity:0;
+transition:2s;
+box-shadow:0 0 30px pink;
+}
+</style>
+</head>
+
+<body>
+
+<div id="text"></div>
+
+<img id="photo" src="PASTE_IMAGE_LINK_HERE">
+
+<script>
+
+let message =
+"Hey ❤️\n\nBefore you came into my life... everything was ordinary.\n\nThen you arrived — and suddenly my world felt brighter.\n\nIf I had to choose again...\nI would still choose you.";
+
+let i = 0;
+
+function typeWriter(){
+if(i < message.length){
+document.getElementById("text").innerHTML += message.charAt(i);
+i++;
+setTimeout(typeWriter,40);
+}
+else{
+document.getElementById("photo").style.opacity = 1;
+}
+}
+
+typeWriter();
+
+</script>
+
+</body>
+</html>
